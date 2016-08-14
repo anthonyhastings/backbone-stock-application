@@ -1,0 +1,17 @@
+<h2>Stock listings</h2>
+
+<table class="stock-table">
+    <thead>
+        <tr>
+            <th class="stock-table__cell">Name</th>
+            <th class="stock-table__cell">Description</th>
+            <th class="stock-table__cell">Price</th>
+            <th class="stock-table__cell">Available</th>
+        </tr>
+    </thead>
+    <tbody class="js-table-body">
+        {{#each stock}}
+            {{> row this}}
+        {{/each}}
+    </tbody>
+</table>
