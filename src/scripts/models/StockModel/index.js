@@ -13,7 +13,7 @@ export default Model.extend({
     /**
      * Take a date string and determines the unix timestamp in seconds.
      *
-     * @param {String} dateString
+     * @param {String} dateString (YYYY-MM-DD)
      * @return {Number|Boolean}
      */
     getTimestampFromString: function(dateString) {
@@ -71,7 +71,7 @@ export default Model.extend({
         }
 
         if (!attributes.hasOwnProperty('price')
-           || Number.isNaN(attributes.price)
+           || isNaN(attributes.price)
            || typeof(attributes.price) !== 'number'
            || attributes.price <= 0) {
             errors.push({field: 'price', message: 'Please supply a price above zero.'});

@@ -1,3 +1,4 @@
+// Loading dependencies.
 import StockCollection from './index.js';
 import StockModel from '../../models/StockModel/';
 
