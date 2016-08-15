@@ -25,6 +25,13 @@ npm run-script build && npm run-script server
 Look in the terminal for where the application is serving from (by default it
 should be http://localhost:4000).
 
+If you would like to run the test suite for Model/Collection unit tests, run
+the following (which will only run if code linting passes):
+
+```
+npm test
+```
+
 
 ## Notes / Decisions
 - The application was built using Google Chrome as the main browser; it's not
@@ -48,6 +55,9 @@ retrieving records. It's not a full implementation but enough for the demo.
 
 - Dates have been stored as Unix timestamps so they can be easily formatted into
 any required timezone (giving the application some portability and scalability).
+
+- Form validation has been added to the Add section to ensure consistent data is
+kept on the server.
 
 
 ## With more time...
