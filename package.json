@@ -16,7 +16,8 @@
     "autoprefixer": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*",
     "pretest": "npm run-script lint",
     "lint": "eslint src/scripts server/",
-    "watch-scripts": "webpack --watch",
+    "watch": "npm run-script watch-scripts & npm run-script watch-styles",
+    "watch-scripts": "npm run-script scripts -- --watch",
     "watch-styles": "nodemon --verbose --ext scss --watch src/styles --exec \"npm run-script styles\"",
     "test": "karma start karma.conf.js"
   },
